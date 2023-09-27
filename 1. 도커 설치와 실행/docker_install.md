@@ -4,6 +4,14 @@ curl -s https://get.docker.com/ | sudo sh
 ```
 명령어를 입력하고 패스워드를 입력하면 리눅스 배포판에 따라 자동으로 최신버전의 도커를 설치한다.
 
+#### CURL
+- Client URL의 약자이다. 클라이언트에서 커맨드 라인이나 소스코드로 손 쉽게 웹 브라우저 처럼 활동할 수 있도록 해주는 기술이다. curl의 특징은 수 많은 프로토콜을 지원한다는 것이다.
+
+ex) `DICT`, `FILE`, `FTP`, `FTPS`, `Gopher`, `HTTP`, `HTTPS`, `IMAP`, `IMAPS`, `LDAP`, `LDAPS`, `POP3`, `POP3S`, `RTMP`, `RTSP`, `SCP`, `SFTP`, `SMB`, `SMBS`, `SMTP`, `SMTPS`, `Telnet`, `TFTP`
+
+**위 처럼 url을 가지고 할 수 있는 것들은 왠만하면 전부 다 할 수 있다.**
+심지어는 SSL 또한 가능하다.
+
 ```zsh
 sudo usermod -aG docker ubuntu
 ```
