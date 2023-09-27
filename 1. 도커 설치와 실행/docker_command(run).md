@@ -145,7 +145,7 @@ redis를 정상적으로 실행 할 수 있는 것으로 보인다. 만약 하�
 강의에서는 5.7 버전을 설치해주어서 8.0 버전으로 진행을 해주었다. 이에 따라 명령어도 달라 질 것이다.
 
 ```zsh
-docker run --rm -p 3306:3306 --name=docker_mysql8 -d mysql/mysql-server:8.0
+docker run --rm -p 3306:3306 --name=docker_mysql8 -d mysql
 
 docker exec -it docker_mysql8 mysql -uroot -p
 ```
@@ -168,8 +168,7 @@ mysql>
 매번 위와 같이 ROOT PASSWORD를 찾는 과정은 너무나도 귀찮다. root 패스워드 없이 컨테이너가 생성 될 수 있도록 명령어를 바꿔보자.
 
 ```zsh
-docker run --rm -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=true --name=docker_mysql8 -d mysql/mysql-server:8.0
-```
+docker run --rm -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=true --name=docker_mysql8 -d mysql
 
 이 순서대로 진행해왔으면 다음과 같은 문제점에 봉착하게 될 것이다.
 ```zsh
@@ -188,7 +187,7 @@ docker rm -f [dockerId | dockerName]
 
 정상적으로 삭제가 되고 난 이후에 다음 명령어를 실행해보자.
 ```zsh
-docker run --rm -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=true --name=docker_mysql8 -d mysql/mysql-server:8.0
+docker run --rm -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=true --name=docker_mysql8 -d mysql
 ```
 아까와 달리 오류가 발생하지 않고 정상적으로 수행이 되었다. 이전과 동일하게 명령어를 수행하여 해당 mysql을 실행해보자.
 ```zsh
