@@ -1,9 +1,5 @@
 # 1. node 설치
-FROM      ubuntu:22.04
-RUN       apt-get update
-RUN       DEBIAN_FRONTEND=noninteractive apt-get install -y curl
-RUN       curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN       DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
+FROM      node:12
 
 # 2. 소스 복사
 COPY      . /usr/src/app
