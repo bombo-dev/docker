@@ -1,5 +1,5 @@
 # 1. node 설치
-FROM      node:12
+FROM      node:12-alpine
 
 # 2. 패키지를 우선 설치
 COPY ./package* /usr/src/app/
